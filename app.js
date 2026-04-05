@@ -10,11 +10,20 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+// Root route
+app.get("/", (req, res) => {
+  res.send("Finance Backend API Running");
+});
+
+// Routes
 app.use("/api/auth", require("./routes/authRoutes"));
 app.use("/api/records", require("./routes/recordRoutes"));
 app.use("/api/dashboard", require("./routes/dashboardRoutes"));
 app.use("/api/users", require("./routes/userRoutes"));
 
-app.listen(5000, () => {
-  console.log("Server running on port 5000");
+// IMPORTANT for deployment
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
