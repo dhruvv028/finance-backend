@@ -1,4 +1,4 @@
-<img width="944" height="640" alt="image" src="https://github.com/user-attachments/assets/10ebad01-8921-4750-a7ae-4171c443f4f9" /># Finance Data Processing and Access Control Backend
+## Finance Data Processing and Access Control Backend
 
 ## Project Overview
 
